@@ -1,0 +1,773 @@
+:root {
+  --primary: #135bec;
+  --text-main: #111318;
+  --text-muted: #616f89;
+  --border: #f0f2f4;
+  --bg-input: #f0f2f4;
+}
+
+/* A teljes oldal alapbeállítása */
+.front-page {
+  background-color: var(--background-light);
+  min-height: 100vh;
+}
+
+/* EZ A KULCS: Ez fogja össze a Sidebart és a Main Area-t */
+.content-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex; /* Egymás mellé rakja a gyerekeit */
+  gap: 24px;     /* Távolság a Sidebar és a tartalom között */
+  padding: 24px 40px;
+  align-items: flex-start; /* Megakadályozza, hogy a sidebar megnyúljon */
+}
+
+/* Hero Banner képének korlátozása */
+.hero-banner {
+  width: 100%;
+  max-width: 100%; /* Ne tudjon nagyobb lenni a szülőjénél */
+  height: 400px;   /* Fix magasság, hogy ne legyen túl nagy */
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Header alap konténer */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Belső elrendezés: Logo - Search - Links */
+.nav-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 12px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px; /* Térköz az elemek között */
+}
+
+/* Logo részleg */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.logo-text {
+  color: var(--text-main);
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+/* Keresőmező konténer */
+.search-box {
+  flex: 1;
+  max-width: 672px; /* 2xl méretnek felel meg */
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 20px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 12px 8px 40px;
+  background-color: var(--bg-input);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-box input:focus {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+/* Linkek és Gombok elrendezése */
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.desktop-nav a:hover {
+  color: var(--primary);
+}
+
+/* Felhasználói gombok (Account, Cart) */
+.user-utilities {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-btn, .cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.icon-btn {
+  background: transparent;
+  padding: 8px 12px;
+  color: var(--text-main);
+}
+
+.icon-btn:hover {
+  background-color: var(--bg-input);
+}
+
+.cart-btn {
+  position: relative;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 8px 16px;
+}
+
+.cart-btn:hover {
+  background-color: #0d47a1;
+}
+
+/* Kosár jelvény (Badge) */
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #ef4444; /* Piros */
+  color: white;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.sidebar {
+  width: 256px; /* Fix szélesség a Tailwind 'w-64' alapján */
+  flex-shrink: 0; /* Ne nyomódjon össze, ha a fő tartalom sok */
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Távolság a kategória kártya és a pro tagság kártya között */
+}
+
+/* Kategória kártya konténer */
+.category-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+/* Kategória linkek navigációja */
+.cat-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* A CategoryLink komponens által generált link stílusa */
+.cat-item { /* Feltételezve, hogy a CategoryLink ezt az osztályt kapja */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--text-main);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.cat-item:hover {
+  background-color: var(--bg-input);
+}
+
+/* Aktív kategória kiemelése */
+.cat-item.active {
+  background-color: rgba(19, 91, 236, 0.1); /* Kék háttér 10% opacitással */
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.cat-item.active .material-symbols-outlined {
+  color: var(--primary);
+}
+
+.cat-item .material-symbols-outlined {
+  font-size: 20px;
+  color: var(--text-muted);
+}
+
+/* B2B Pro Membership kártya */
+.pro-membership-card {
+  background-color: rgba(19, 91, 236, 0.05); /* Nagyon halvány kék */
+  border: 1px solid rgba(19, 91, 236, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.pro-membership-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.pro-membership-card p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* Körvonalas gomb a kártyához */
+.outline-btn {
+  width: 100%;
+  padding: 8px;
+  background-color: #ffffff;
+  border: 1px solid rgba(19, 91, 236, 0.2);
+  border-radius: 8px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.outline-btn:hover {
+  background-color: rgba(19, 91, 236, 0.05);
+}
+
+/* --- 3. Main Content Area & Hero --- */
+
+.main-area {
+  flex: 1; /* Kitölti a maradék helyet a sidebar mellett */
+  min-width: 0; /* Megakadályozza, hogy a tartalom kinyomja a széleket */
+}
+
+.hero-banner {
+  width: 100%;
+  aspect-ratio: 21 / 9; /* Modern szélesvásznú arány */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%), 
+                    url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+/* Kis felirat a cím felett */
+.badge {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 8px;
+  border-radius: 4px;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.hero-banner h1 {
+  font-size: clamp(24px, 4vw, 48px); /* Reszponzív betűméret */
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.hero-banner p {
+  font-size: 16px;
+  max-width: 500px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+/* Gombok elrendezése a bannerben */
+.hero-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #0d47a1;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  backdrop-filter: blur(4px); /* Modern üveghatás */
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+}
+
+/* --- 4. Filter Chips & Section Header --- */
+
+/* Szűrő gombok tárolója - vízszintes görgetéshez */
+.filter-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto; /* Ez teszi lehetővé a görgetést, ha nem fér el */
+  padding: 8px 0 24px 0;
+  scrollbar-width: none; /* Firefox: elrejti a görgetősávot */
+  -ms-overflow-style: none; /* IE: elrejti a görgetősávot */
+}
+
+/* Chrome/Safari: elrejti a görgetősávot a tisztább kinézetért */
+.filter-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 9999px; /* Teljesen kerek szélek */
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-main);
+  white-space: nowrap; /* Ne törje meg a szöveget több sorba */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.filter-chip .material-symbols-outlined {
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+/* Szekció fejléc elrendezése (Cím + View All link) */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.view-all {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  transition: gap 0.2s;
+}
+
+.view-all:hover {
+  gap: 8px; /* Kis animáció: a nyíl elmozdul jobbra */
+}
+
+.view-all .material-symbols-outlined {
+  font-size: 18px;
+}
+
+/* --- 5. Product Grid & Cards --- */
+
+/* A rács, ami elrendezi a kártyákat */
+.products-grid {
+  display: grid;
+  /* Automatikusan annyi oszlopot hoz létre, amennyi elfér, minimum 280px szélességgel */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 8px;
+}
+
+/* Egyedi termékkártya */
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden; /* Hogy a kép sarka ne lógjon ki a kerekítésnél */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Kép konténer */
+.image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Tökéletes négyzet alakú képek */
+  background-color: #f8f9fa;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Kitölti a területet torzítás nélkül */
+}
+
+/* Badge/Tag a képen (pl. TOP SELLER) */
+.card-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Kedvencekhez adás gomb a képen */
+.wishlist-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-muted);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: color 0.2s;
+}
+
+.wishlist-btn:hover {
+  color: #ef4444; /* Pirosra vált hovernél */
+}
+
+/* Kártya tartalmi része */
+.card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.brand-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.product-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.4;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Árak elrendezése */
+.price-row {
+  margin-top: auto; /* A kártya aljára tolja az árat */
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.current-price {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.old-price {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+.bulk-price {
+  font-size: 11px;
+  color: #16a34a; /* Zöld szín a nagyker árnak */
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Kosárba gomb a kártyán */
+.add-cart-btn {
+  background-color: var(--bg-input);
+  color: var(--text-main);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-cart-btn:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* --- 6. B2B Banner Szekció --- */
+
+.b2b-banner {
+  margin-top: 48px;
+  background-color: #101622; /* Sötét "enterprise" kék/fekete */
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: #ffffff;
+}
+
+.b2b-info h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.b2b-info p {
+  color: #94a3b8; /* Halványabb szürke a sötét háttéren */
+  font-size: 16px;
+  margin-bottom: 24px;
+  max-width: 500px;
+}
+
+/* Kis ikonos jellemzők elrendezése */
+.b2b-features {
+  display: flex;
+  gap: 24px;
+}
+
+.b2b-features span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.b2b-features .material-symbols-outlined {
+  color: var(--primary); /* A kék ikonok jól mutatnak a sötéten */
+  font-size: 20px;
+}
+
+/* Speciális "large" gomb a bannerhez */
+.btn-primary.large {
+  padding: 16px 32px;
+  font-size: 16px;
+  flex-shrink: 0; /* Ne engedje a gombot összenyomódni */
+}
+
+/* Reszponzivitás: ha túl kicsi a hely, egymás alá rakja az elemeket */
+@media (max-width: 768px) {
+  .b2b-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 20px;
+  }
+  
+  .b2b-features {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .btn-primary.large {
+    width: 100%;
+  }
+}
+
+/* --- 7. Footer Szekció --- */
+
+.main-footer {
+  background-color: #ffffff;
+  border-top: 1px solid var(--border);
+  padding: 64px 40px 32px 40px;
+  margin-top: 64px;
+}
+
+.footer-grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  /* 4 oszlopos elrendezés: a brand rész szélesebb (2 rész), a linkek 1-1 részt kapnak */
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* Footer márka részleg */
+.footer-brand .logo {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.footer-brand p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 240px;
+}
+
+/* Footer oszlopok és linkek */
+.footer-col h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 24px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: 12px;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--primary);
+}
+
+/* Reszponzív lábléc mobilra */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr; /* Tablet-en 2x2-es rács */
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* Mobilon minden egymás alá */
+    text-align: center;
+  }
+  
+  .footer-brand p {
+    max-width: none;
+    margin: 0 auto 24px auto;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased; /* Ettől lesz olyan sima és éles, mint a képen */
+}
