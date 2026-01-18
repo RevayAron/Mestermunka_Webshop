@@ -186,6 +186,4 @@ const FooterColumn = ({ title, links }) => (
   </div>
 );
 
-
-
 export default FrontPage;
