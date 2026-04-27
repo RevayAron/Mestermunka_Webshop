@@ -1,0 +1,113 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\uploads\\02f548ae-7495-4524-934d-4dffa961b808_625546094_796426740124443_3540306466491714340_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\02f548ae-7495-4524-934d-4dffa961b808_625546094_796426740124443_3540306466491714340_n.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\uploads\\04005f41-3bb7-47ba-9b67-06569bc962f9_55c6bb68-ef76-4950-87a9-35ad4675d0d7.jfif",
+      "PackagePath": "staticwebassets\\uploads\\04005f41-3bb7-47ba-9b67-06569bc962f9_55c6bb68-ef76-4950-87a9-35ad4675d0d7.jfif"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\uploads\\6bb21c5a-d0be-44ea-bec7-aa542221422b_625546094_796426740124443_3540306466491714340_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6bb21c5a-d0be-44ea-bec7-aa542221422b_625546094_796426740124443_3540306466491714340_n.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\uploads\\8809dfc0-14db-4861-85c0-f2c9c635c7ca_621177630_3202201423286734_5771546781335395202_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8809dfc0-14db-4861-85c0-f2c9c635c7ca_621177630_3202201423286734_5771546781335395202_n.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\uploads\\89c609da-3d61-4b4c-ac2a-798a8a01d74d_meents_profile4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\89c609da-3d61-4b4c-ac2a-798a8a01d74d_meents_profile4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\uploads\\9ede3efe-94ce-4e4a-abc9-0ce91b814a41_513f1d0d-0401-4f81-87e5-a921eee4dec1.jfif",
+      "PackagePath": "staticwebassets\\uploads\\9ede3efe-94ce-4e4a-abc9-0ce91b814a41_513f1d0d-0401-4f81-87e5-a921eee4dec1.jfif"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\uploads\\cb09f5c2-deaa-423f-aa72-a55acf155ace_625546094_796426740124443_3540306466491714340_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\cb09f5c2-deaa-423f-aa72-a55acf155ace_625546094_796426740124443_3540306466491714340_n.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_15_35a52315-a42f-4cd2-a61c-9b8fc8570c2d.jpg",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_15_35a52315-a42f-4cd2-a61c-9b8fc8570c2d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_15_4259a602-091c-4451-880b-757bde384a33.jpg",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_15_4259a602-091c-4451-880b-757bde384a33.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_15_44390ab1-d8f0-4025-a3c3-d8919666ffda.jpg",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_15_44390ab1-d8f0-4025-a3c3-d8919666ffda.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_15_72bb9661-cf4f-429d-b7de-643a87402d02.jpg",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_15_72bb9661-cf4f-429d-b7de-643a87402d02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_15_abc30bbb-fbaa-4bf7-9616-03fabce15610.jpg",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_15_abc30bbb-fbaa-4bf7-9616-03fabce15610.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_15_ca20dd78-4fb9-471a-99b1-50cc1beaaf5a.jfif",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_15_ca20dd78-4fb9-471a-99b1-50cc1beaaf5a.jfif"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_15_da0177fb-9f9f-4a17-bcc1-06bc537dc2d0.jpg",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_15_da0177fb-9f9f-4a17-bcc1-06bc537dc2d0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_15_f99e98bc-4897-4e6d-91de-060fe7110870.jpg",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_15_f99e98bc-4897-4e6d-91de-060fe7110870.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_17_a6d3592b-45ad-4f31-9750-bdb7f61ff5a0.jpg",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_17_a6d3592b-45ad-4f31-9750-bdb7f61ff5a0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_18_e29176df-6d7a-4bf3-9fac-9c5b58141564.jfif",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_18_e29176df-6d7a-4bf3-9fac-9c5b58141564.jfif"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_1_4811c22f-4967-4d91-8a87-69d9bd3f718d.jfif",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_1_4811c22f-4967-4d91-8a87-69d9bd3f718d.jfif"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_1_7d497ec2-f3e7-470a-9e66-6fd4c442bfe8.jpg",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_1_7d497ec2-f3e7-470a-9e66-6fd4c442bfe8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_1_ab97eb05-8c38-41ea-846f-abde5bca2a3d.jfif",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_1_ab97eb05-8c38-41ea-846f-abde5bca2a3d.jfif"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_1_f5dd3fc0-a121-4130-a64e-4cca7b2f1b5b.jpg",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_1_f5dd3fc0-a121-4130-a64e-4cca7b2f1b5b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_1_fd35cf0c-30d9-4855-836c-64e318de4e43.jfif",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_1_fd35cf0c-30d9-4855-836c-64e318de4e43.jfif"
+    },
+    {
+      "Id": "C:\\Users\\szony\\Desktop\\Mestermunka_Webshop\\Mestermunka_Webshop-main\\Backend\\VendoraAPI\\wwwroot\\user_avatars\\avatar_1_ff643f39-2e7f-42c5-b755-593a6a21ed06.jpg",
+      "PackagePath": "staticwebassets\\user_avatars\\avatar_1_ff643f39-2e7f-42c5-b755-593a6a21ed06.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.VendoraAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.VendoraAPI.props",
+      "PackagePath": "build\\VendoraAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.VendoraAPI.props",
+      "PackagePath": "buildMultiTargeting\\VendoraAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.VendoraAPI.props",
+      "PackagePath": "buildTransitive\\VendoraAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

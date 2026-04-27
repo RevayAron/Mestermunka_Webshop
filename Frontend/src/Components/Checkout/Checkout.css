@@ -1,0 +1,301 @@
+.checkout-page {
+  background-color: var(--bg-page);
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
+}
+
+.checkout-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.checkout-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.checkout-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+}
+
+.checkout-header p {
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* BAL OSZLOP: KÁRTYÁK */
+.checkout-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 1px solid var(--primary);
+  padding: 30px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.checkout-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 20px 0;
+  font-size: 1.2rem;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 15px;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-group {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-page);
+  border: 1px solid var(--primary);
+  color: var(--text-main);
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--text-main);
+  box-shadow: 0 0 0 3px var(--text-main-alpha-20);
+}
+
+/* FIZETÉSI MÓDOK */
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: var(--bg-page);
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.payment-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--text-main);
+}
+
+.payment-option .material-symbols-outlined {
+  font-size: 28px;
+  color: var(--text-muted);
+}
+
+.payment-option div strong {
+  display: block;
+  color: var(--text-main);
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.payment-option div p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.payment-option:hover {
+  border-color: var(--text-main);
+  background: var(--text-main-alpha-05);
+}
+
+.payment-option.active {
+  border-color: var(--primary);
+  background: var(--primary-alpha-10);
+}
+
+.payment-option.active .material-symbols-outlined {
+  color: var(--primary);
+}
+
+.checkout-summary-section {
+  position: sticky;
+  top: 100px;
+}
+
+.checkout-summary-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 1px solid var(--primary);
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.checkout-summary-card h2 {
+  margin: 0 0 20px 0;
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+
+.summary-items {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 10px;
+}
+
+.summary-items::-webkit-scrollbar {
+  width: 4px;
+}
+.summary-items::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--primary);
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-qty {
+  background: var(--bg-page);
+  color: var(--text-main);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid var(--primary);
+}
+
+.item-name {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.item-price {
+  font-weight: bold;
+  color: var(--text-main);
+}
+
+.summary-totals {
+  background: var(--bg-page);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+}
+
+.total-row:last-child {
+  margin-bottom: 0;
+}
+
+.grand-total {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--primary);
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--text-main);
+}
+
+.place-order-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 18px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.secure-checkout-text {
+  text-align: center;
+  color: var(--primary);
+  font-size: 13px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.checkout-success-card {
+  background: var(--bg-card);
+  width: 100%;
+  max-width: 500px;
+  padding: 50px 40px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 50px var(--primary-alpha-30);
+  animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (max-width: 900px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+  .checkout-summary-section {
+    position: static;
+  }
+  .input-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

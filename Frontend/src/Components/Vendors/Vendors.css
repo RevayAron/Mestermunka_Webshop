@@ -1,0 +1,26 @@
+.vendors-page { background-color: var(--bg-page); min-height: 100vh; font-family: 'Inter', sans-serif;}
+.v-header-simple { display: flex; justify-content: space-between; padding: 20px 40px; background: var(--bg-card); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-bottom: 1px solid var(--primary);}
+.v-header-simple .logo { display: flex; align-items: center; gap: 10px; color: var(--primary); }
+.v-header-simple .logo h2 { margin: 0; font-size: 1.5rem; color: var(--text-main); }
+.v-header-simple .logo h2 span { font-weight: normal; color: var(--text-muted); }
+
+.back-btn { background: transparent; border: 1px solid var(--primary); padding: 8px 16px; border-radius: 6px; cursor: pointer; color: var(--text-muted); font-weight: bold; transition: all 0.2s;}
+.back-btn:hover { background: var(--primary); color: var(--bg-card); }
+
+.vendors-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+.vendors-hero { text-align: center; margin-bottom: 40px; }
+.vendors-hero h1 { font-size: 2.5rem; color: var(--text-main); margin-bottom: 10px; }
+.vendors-hero p { color: var(--text-muted); font-size: 1.1rem; }
+.loading-text { text-align: center; color: var(--text-muted); font-size: 1.2rem; margin-top: 50px; }
+
+.vendors-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+.vendor-card { background: var(--bg-card); border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid var(--primary); transition: transform 0.2s, box-shadow 0.2s; }
+.vendor-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2); border-color: var(--text-main); }
+.vendor-avatar { width: 80px; height: 80px; background: var(--primary); color: var(--bg-card); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; }
+.vendor-avatar span { font-size: 40px; }
+.vendor-card h3 { margin: 0 0 20px 0; color: var(--text-main); font-size: 1.3rem; }
+.vendor-contact { margin-bottom: 25px; text-align: left; background: var(--bg-page); padding: 15px; border-radius: 8px; border: 1px solid var(--primary);}
+.vendor-contact p { margin: 8px 0; display: flex; align-items: center; gap: 10px; color: var(--text-muted); font-size: 0.9rem; }
+.vendor-contact span { font-size: 18px; color: var(--primary); }
+.open-shop-btn { width: 100%; background: var(--primary); color: var(--bg-card); border: none; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 8px; transition: background 0.2s; }
+.open-shop-btn:hover { background: var(--text-main); }
